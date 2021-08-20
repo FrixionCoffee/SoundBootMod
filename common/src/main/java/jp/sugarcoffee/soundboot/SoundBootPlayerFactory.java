@@ -109,7 +109,7 @@ class ClipPlayer implements ISoundPlayer {
                 clip.addLineListener(event -> {
                     if (event.getType() == LineEvent.Type.STOP) {
                         clip.close();
-                        LogManager.getLogger().info("Music fin.");
+                        LogManager.getLogger().debug("Music fin.");
                     }
                 });
 
