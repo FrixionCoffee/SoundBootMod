@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "sound_boot_mod-fabric-refmap.json",
+  "package": "jp.sugarcoffee.soundboot.fabric.mixin",
+  "mixins": [
+
+  ],
+  "client": [
+    "TitleScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

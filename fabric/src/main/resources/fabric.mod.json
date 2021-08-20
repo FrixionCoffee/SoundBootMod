@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "soundbootmod",
+  "version": "${version}",
+  "name": "soundbootmod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "Insert License Here",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "jp.sugarcoffee.soundboot.fabric.SoundBootModFabric"
+    ]
+  },
+  "mixins": [
+    "soundbootmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": ">=1.16.4",
+    "architectury": ">=1.1.55"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
