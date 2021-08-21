@@ -3,15 +3,15 @@
   "id": "soundbootmod",
   "version": "${version}",
   "name": "soundbootmod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Play music when the title of the game is displayed. It runnable both fabric and forge.",
   "authors": [
-    "Me!"
+    "SugarCoffee"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://forum.civa.jp/viewtopic.php?f=3&t=777",
+    "sources": "https://github.com/FrixionCoffee/SoundBootMod"
   },
-  "license": "Insert License Here",
+  "license": "Creative Commons Zero v1.0 Universal",
   "environment": "*",
   "entrypoints": {
     "main": [
