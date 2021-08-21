@@ -17,7 +17,7 @@ Maybe 1.16.4 ~ 1.16.5 will work(Java8)
 多分1.16.4 ~ 1.16.5なら動作します。(Java8)
 
 
-## Introduction
+## Introduction(導入方法)
 1. Put in mods folder
 2. A sound_boot folder will be created in the game folder(game run)
 3. Put the .wav file in the sound_boot folder
@@ -32,7 +32,7 @@ If there are multiple .wav files, only one will be played randomly.
 
 .wavファイルが複数ある場合はランダムに1曲だけ再生されます。
 
-## Attention
+## Attention(注意)
 
 .wav files larger than 1GB will not be played and will throw an IllegalArgumentException.
 
@@ -44,3 +44,32 @@ Since .wav files are just containers, you can also store .mp3s, but this mod pro
 
 <br>
 動作確認はボイスロイドの.wavで行いました。(VOICEROID2 紲星あかり 認証済)
+
+
+## Operation confirmed environment(動作確認済バージョン)
+<hr>
+
+### Forge(Java8)
+
+#### Forge 1.16.4
+
+- ClientSide
+    - 1.16.4-forge-35.1.37.jar
+    - architectury-1.20.29-forge.jar
+
+#### Forge 1.16.5
+
+- ClientSide
+  - 1.16.5-forge-36.2.0.jar
+  - architectury-1.20.29-forge.jar
+
+<hr>
+
+### Fablic(Java8)
+
+#### Fablic 1.16.4
+
+- ClientSide
+  - fabric-loader-0.11.6-1.16.4.jar
+  - fabric-api-0.37.2+1.16.jar
+  - architectury-1.20.29-fabric.jar
