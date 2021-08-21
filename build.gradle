@@ -29,8 +29,8 @@ allprojects {
     apply plugin: "maven-publish"
 
     // gradle.propertiesの値を直接変更すると開発環境のForge runClientがこけるので、変数でビルド時・runClient時を切り替えるようにする
-    //gradle.propertiesさえ変えなければOKでarchivesBaseNameとかはrunClient時に変えても良いみたい。よくわからんね
-    final boolean devEnvRunClientMode = false
+    // falseでもしばらく動作するけどキャッシュが切れたときにこけるようになるっぽい。runClientするときは確実にtrueに変更する。
+    final boolean devEnvRunClientMode = true
 
     if (devEnvRunClientMode) {
         archivesBaseName = rootProject.archives_base_name
@@ -58,7 +58,7 @@ allprojects {
         // We'll use that if it's available, but otherwise we'll use the older option.
         def targetVersion = 8
         if (JavaVersion.current().isJava9Compatible()) {
-            options.release = targetVersion
+            options.release = targetVersion as Property<Integer>
         }
     }
 
