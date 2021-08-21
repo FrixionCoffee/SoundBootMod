@@ -7,14 +7,14 @@ It runnable both fabric and forge.
 
 [Confirmed version file](./ENVIRONMENT.md)
 
-Maybe 1.16.2 ~ 1.16.5 will work(Java8)
+Maybe 1.16.4 ~ 1.16.5 will work(Java8)
 
 
 マイクラタイトルが表示されたときに音楽を再生します。FabricとForgeの両方で実行可能です。
 
 [動作確認済バージョンのファイル](./ENVIRONMENT.md)
 
-多分1.16.2 ~ 1.16.5なら動作します。(Java8)
+多分1.16.4 ~ 1.16.5なら動作します。(Java8)
 
 
 ## Introduction
