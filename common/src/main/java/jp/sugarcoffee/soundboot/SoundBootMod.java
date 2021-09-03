@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -62,8 +63,7 @@ public class SoundBootMod {
             return Optional.empty();
         }
 
-        Random random = new Random();
-        final int index = random.nextInt(pathList.size());
+        final int index = ThreadLocalRandom.current().nextInt(pathList.size());
 
         return Optional.of(
                 pathList.get(index)
