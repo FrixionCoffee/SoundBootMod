@@ -1,9 +1,7 @@
 package jp.sugarcoffee.soundboot.forge.mixin;
 
-import jp.sugarcoffee.soundboot.SoundBootMod;
+import jp.sugarcoffee.soundboot.CommonTitleScreenMixin;
 import net.minecraft.client.gui.screens.TitleScreen;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,12 +15,8 @@ public class TitleScreenMixin {
 //    @Inject(at = @At("TAIL"), method = "render")
     private void init(CallbackInfo callbackInfo) {
         if (!initialize) {
-            final Logger LOGGER = LogManager.getLogger();
-            LOGGER.debug("Sound Boot Mod: TitleScreen Mixin run!");
 
-            SoundBootMod.createBootSoundDirectory();
-            SoundBootMod.searchWavFile()
-                            .ifPresent(SoundBootMod::soundPlay);
+            CommonTitleScreenMixin.playSound();
             initialize = true;
 
         }

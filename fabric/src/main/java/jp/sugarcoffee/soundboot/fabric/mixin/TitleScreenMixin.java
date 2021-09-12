@@ -1,5 +1,6 @@
 package jp.sugarcoffee.soundboot.fabric.mixin;
 
+import jp.sugarcoffee.soundboot.CommonTitleScreenMixin;
 import jp.sugarcoffee.soundboot.SoundBootMod;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.apache.logging.log4j.LogManager;
@@ -24,12 +25,7 @@ public class TitleScreenMixin {
             return;
         }
 
-        final Logger logger = LogManager.getLogger();
-        logger.debug("Sound Boot Mod: TitleScreen Mixin run!");
-
-        SoundBootMod.createBootSoundDirectory();
-        SoundBootMod.searchWavFile()
-                .ifPresent(SoundBootMod::soundPlay);
+        CommonTitleScreenMixin.playSound();
     }
 
     private void addCall() {
