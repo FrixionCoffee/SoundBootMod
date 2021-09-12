@@ -1,5 +1,6 @@
 package jp.sugarcoffee.soundboot;
 
+import jp.sugarcoffee.soundboot.functions.ExceptionUtil;
 import jp.sugarcoffee.soundboot.functions.IOExceptionRunner;
 import org.apache.logging.log4j.LogManager;
 
@@ -7,6 +8,7 @@ import javax.sound.sampled.*;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -63,8 +65,7 @@ class Java8SoundPlayer implements ISoundPlayer {
                 audioClip.play();
 
             } catch (MalformedURLException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
+                throw ExceptionUtil.printAndWrapThrow(e);
             }
         });
 
@@ -116,9 +117,11 @@ class ClipPlayer implements ISoundPlayer {
                 clip.open(audioInputStream);
                 clip.start();
 
-            } catch (IOException | UnsupportedAudioFileException | LineUnavailableException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw ExceptionUtil.printAndWrapThrow(e, UncheckedIOException::new);
+
+            } catch (UnsupportedAudioFileException | LineUnavailableException e) {
+                throw ExceptionUtil.printAndWrapThrow(e);
             }
         });
 
